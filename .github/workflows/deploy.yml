@@ -37,6 +37,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install Hexo default theme (landscape)
+        run: |
+          cd themes
+          git clone https://github.com/hexojs/hexo-theme-landscape.git landscape
+          cd ..
+
       - name: Build with Hexo
         run: |
           npx hexo clean
