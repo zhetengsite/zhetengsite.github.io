@@ -39,6 +39,8 @@ jobs:
 
       - name: Install Hexo default theme (landscape)
         run: |
+          # Create themes directory if it doesn't exist
+          mkdir -p themes
           cd themes
           git clone https://github.com/hexojs/hexo-theme-landscape.git landscape
           cd ..
